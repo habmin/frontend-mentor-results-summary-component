@@ -1,6 +1,105 @@
+@font-face {
+    font-family: Haken-Grotesk;
+    src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: Haken-Grotesk;
+    font-weight: bold;
+    src: url('assets/fonts/static/HankenGrotesk-Bold.ttf');
+}
+
+@font-face {
+    font-family: Haken-Grotesk;
+    font-weight: bolder;
+    src: url('assets/fonts/static/HankenGrotesk-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: Haken-Grotesk;
+    font-weight: normal;
+    src: url('assets/fonts/static/HankenGrotesk-Medium.ttf');
+}
+
 :root {
+    /* Primary */
     --light_red: hsl(0, 100%, 67%);
     --orangey_yellow: hsl(39, 100%, 56%);
     --green_teal: hsl(166, 100%, 37%);
     --cobalt_blue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+    --light_slate_blue_bg: hsl(252, 100%, 67%);
+    --light_royal_blue_bg: hsl(241, 81%, 54%);
+    --violet_blue_circle: hsla(256, 72%, 46%, 1);
+    --persian_blue_circle: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --pale_blue: hsl(221, 100%, 96%);
+    --light_lavender: hsl(241, 100%, 89%);
+    --light-gray: hsl(212, 45%, 89%);
+    --dark_gray_blue: hsl(224, 30%, 27%);
+}
+
+body {
+    background-color: var(--white);
+    font-family: Haken-Grotesk;
+}
+
+.results-box {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: var(--white);
+}
+
+.overall-box {
+    background-image: linear-gradient(var(--light_slate_blue_bg), var(--light_royal_blue_bg));
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.overall-circle {
+    background-image: linear-gradient(var(--persian_blue_circle), var(--violet_blue_circle));
+}
+
+.type-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3%;
+}
+
+.type-name {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.reaction {
+    color: var(--light_red);
+}
+
+.memory {
+    color: var(--orangey_yellow);
+}
+
+.verbal {
+    color: var(--green_teal);
+}
+
+.visual {
+    color: var(--cobalt_blue);
+}
+
+.attribution {
+    text-align: center;
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+    font-size: 11px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
