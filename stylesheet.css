@@ -1,3 +1,7 @@
+/* *************/
+/* Font Import */
+/* *************/
+
 @font-face {
     font-family: Haken-Grotesk;
     src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
@@ -21,12 +25,22 @@
     src: url('assets/fonts/static/HankenGrotesk-Medium.ttf');
 }
 
+/* ******************* */
+/* HSL Color Variables */
+/* ******************* */
+
 :root {
     /* Primary */
     --light_red: hsl(0, 100%, 67%);
     --orangey_yellow: hsl(39, 100%, 56%);
     --green_teal: hsl(166, 100%, 37%);
     --cobalt_blue: hsl(234, 85%, 45%);
+
+    /* Transparancies for Primaries */
+    --light_red_a: hsla(0, 100%, 67%, 7%);
+    --orangey_yellow_a: hsla(39, 100%, 56%, 7%);
+    --green_teal_a: hsla(166, 100%, 37%, 7%);
+    --cobalt_blue_a: hsla(234, 85%, 45%, 7%);
 
     /* Gradients */
     --light_slate_blue_bg: hsl(252, 100%, 67%);
@@ -38,37 +52,90 @@
     --white: hsl(0, 0%, 100%);
     --pale_blue: hsl(221, 100%, 96%);
     --light_lavender: hsl(241, 100%, 89%);
-    --light-gray: hsl(212, 45%, 89%);
+    --light_gray: hsl(212, 45%, 89%);
     --dark_gray_blue: hsl(224, 30%, 27%);
+}
+
+/* ******** */
+/* Reseters */
+/* ******** */
+
+/* body, div, h1, h2, h3, p {
+    padding: 0;
+    margin: 0;
+} */
+
+/* *********** */
+/* Text Styles */
+/* *********** */
+
+.bold {
+    font-weight: bold;
+}
+
+.light-lavender {
+    color: var(--light_lavender);
+}
+
+.white {
+    color: var(--white);
 }
 
 body {
     background-color: var(--white);
     font-family: Haken-Grotesk;
+    font-size: 18px;
+}
+
+.sections-sizing {
+    width: 50%;
+    padding: 18px 40px 18px 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .results-box {
     display: flex;
     flex-flow: row nowrap;
     background-color: var(--white);
+    width: 100%;
+    max-width: 735px;
+    height: 512px;
+    box-shadow: 0px 8px 25px 10px var(--pale_blue);
+    border-radius: 25px;
 }
 
 .overall-box {
     background-image: linear-gradient(var(--light_slate_blue_bg), var(--light_royal_blue_bg));
-    display: flex;
-    flex-flow: column nowrap;
+    border-radius: 25px;
+    text-align: center;
 }
 
 .overall-circle {
-    background-image: linear-gradient(var(--persian_blue_circle), var(--violet_blue_circle));
+    padding: 30px;
+    width: 150px;
+    height: 150px;
+    background-image: linear-gradient(var(--violet_blue_circle), var(--persian_blue_circle));
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    border-radius: 50%;
+    text-align: center;
 }
+
+/* .summary-box {
+    text-align: left;
+} */
 
 .type-bar {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    border-radius: 3%;
+    border-radius: 10px;
+    width: 100%;
 }
 
 .type-name {
@@ -76,20 +143,55 @@ body {
     flex-flow: row nowrap;
 }
 
+.type-results {
+    color: var(--light_gray);
+}
+
+.type-results span {
+    color: black;
+    font-weight: bold;
+}
+
 .reaction {
     color: var(--light_red);
+    background-color: var(--light_red_a);
 }
 
 .memory {
     color: var(--orangey_yellow);
+    background-color: var(--orangey_yellow_a);
 }
 
 .verbal {
     color: var(--green_teal);
+    background-color: var(--green_teal_a);
 }
 
 .visual {
     color: var(--cobalt_blue);
+    background-color: var(--cobalt_blue_a);
+}
+
+.total-big {
+    font-size: 70px;
+    font-weight: bold;
+    color: var(--white);
+    margin: 0px;
+}
+
+.total-small {
+    position: relative;
+    bottom: 10px;
+    color: var(--light_lavender);
+    opacity: 50%;
+    margin: 0px;
+}
+
+.continue-button {
+    text-align: center;
+    width: 100%;
+    border-radius: 30px;
+    background-color: var(--dark_gray_blue);
 }
 
 .attribution {
