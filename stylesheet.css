@@ -84,6 +84,10 @@
     color: hsla(0, 0%, 0%, .4);
 }
 
+/* ********************* */
+/* Main container styles */
+/* ********************* */
+
 body {
     background-color: var(--white);
     font-family: Haken-Grotesk;
@@ -91,6 +95,8 @@ body {
     margin: 0px;
     padding: 0px;
     min-height: 98vh;
+
+    /* For centering the results box */
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -135,6 +141,21 @@ body {
     justify-content: center;
     border-radius: 50%;
     text-align: center;
+}
+
+.total-big {
+    font-size: 70px;
+    font-weight: bold;
+    color: var(--white);
+    margin: 0px;
+}
+
+.total-small {
+    position: relative;
+    bottom: 10px;
+    color: var(--light_lavender);
+    opacity: 50%;
+    margin: 0px;
 }
 
 .results-text {
@@ -188,21 +209,6 @@ body {
     background-color: var(--cobalt_blue_a);
 }
 
-.total-big {
-    font-size: 70px;
-    font-weight: bold;
-    color: var(--white);
-    margin: 0px;
-}
-
-.total-small {
-    position: relative;
-    bottom: 10px;
-    color: var(--light_lavender);
-    opacity: 50%;
-    margin: 0px;
-}
-
 .continue-button {
     margin: 25px 0 2px 0;
     height: 55px;
@@ -218,6 +224,9 @@ body {
     background-image: linear-gradient(var(--light_slate_blue_bg), var(--light_royal_blue_bg));
 }
 
+/* ************* */
+/* Footer Styles */
+/* ************* */
 
 footer {
     text-align: center;
@@ -233,6 +242,10 @@ footer {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+/* ************************** */
+/* Responsive for Mobile View */
+/* ************************** */
 
 @media (max-width: 575px) {
     body {
@@ -260,6 +273,6 @@ footer {
     }
 
     footer {
-        position:initial;
+        position: initial;
     }
 }
