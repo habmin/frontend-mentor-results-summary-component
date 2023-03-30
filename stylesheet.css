@@ -25,9 +25,9 @@
     src: url('assets/fonts/static/HankenGrotesk-Medium.ttf');
 }
 
-/* ******************* */
-/* HSL Color Variables */
-/* ******************* */
+/* ********* */
+/* Variables */
+/* ********* */
 
 :root {
     /* Primary */
@@ -55,16 +55,10 @@
     --light_lavender: hsl(241, 100%, 89%);
     --light_gray: hsl(212, 45%, 89%);
     --dark_gray_blue: hsl(224, 30%, 27%);
+
+    /* Container Styles */
+    --default-border-radius: 30px;
 }
-
-/* ******** */
-/* Reseters */
-/* ******** */
-
-/* body, div, h1, h2, h3, p {
-    padding: 0;
-    margin: 0;
-} */
 
 /* *********** */
 /* Text Styles */
@@ -94,7 +88,8 @@ body {
     background-color: var(--white);
     font-family: Haken-Grotesk;
     font-size: 18px;
-
+    margin: 0px;
+    padding: 0px;
     min-height: 98vh;
     display: flex;
     flex-flow: column nowrap;
@@ -117,15 +112,16 @@ body {
     background-color: var(--white);
     width: 100%;
     max-width: 735px;
+    min-width: 285px;
     height: 512px;
     box-shadow: 0px 8px 25px 10px var(--pale_blue);
-    border-radius: 25px;
+    border-radius: var(--default-border-radius);
     
 }
 
 .overall-box {
     background-image: linear-gradient(var(--light_slate_blue_bg), var(--light_royal_blue_bg));
-    border-radius: 25px;
+    border-radius: var(--default-border-radius);
     text-align: center;
 }
 
@@ -154,7 +150,7 @@ body {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 15px;
     width: 100%;
 }
 
@@ -236,4 +232,34 @@ footer {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 575px) {
+    body {
+        justify-content: start;
+    }
+
+    .results-box {
+        flex-flow: column nowrap;
+        max-width: 100%;
+        height: 100%;
+        box-shadow: none;
+    }
+
+    .sections-sizing {
+        width: auto;
+        height: 100%;
+    }
+
+    .overall-box {
+        border-radius: 0 0 var(--default-border-radius) var(--default-border-radius);
+    }
+
+    .type-bar {
+        margin: 10px 0 10px 0;
+    }
+
+    footer {
+        position:initial;
+    }
 }
