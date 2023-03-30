@@ -49,6 +49,7 @@
     --persian_blue_circle: hsla(241, 72%, 46%, 0);
 
     /* Neutral */
+    --black: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 100%);
     --pale_blue: hsl(221, 100%, 96%);
     --light_lavender: hsl(241, 100%, 89%);
@@ -79,6 +80,14 @@
 
 .white {
     color: var(--white);
+}
+
+.black {
+    color: var(--black);
+}
+
+.black-a{
+    color: hsla(0, 0%, 0%, .4);
 }
 
 body {
@@ -125,9 +134,9 @@ body {
     text-align: center;
 }
 
-/* .summary-box {
-    text-align: left;
-} */
+.summary-box {
+    align-items: start;
+}
 
 .type-bar {
     display: flex;
@@ -138,18 +147,18 @@ body {
     width: 100%;
 }
 
-.type-name {
+.type-label {
+    width: fit-content;
     display: flex;
     flex-flow: row nowrap;
 }
 
-.type-results {
-    color: var(--light_gray);
+.type-label img {
+    margin: 15px;
 }
 
-.type-results span {
-    color: black;
-    font-weight: bold;
+.type-result {
+    margin-right: 15px;
 }
 
 .reaction {
@@ -188,6 +197,9 @@ body {
 }
 
 .continue-button {
+    margin: 25px 0 2px 0;
+    height: 55px;
+    margin: 10px 0 10px 0;
     text-align: center;
     width: 100%;
     border-radius: 30px;
