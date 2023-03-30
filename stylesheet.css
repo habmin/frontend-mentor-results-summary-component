@@ -134,6 +134,10 @@ body {
     text-align: center;
 }
 
+.results-text {
+    margin: 0 20px 20px 20px;    
+}
+
 .summary-box {
     align-items: start;
 }
